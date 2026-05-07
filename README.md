@@ -70,7 +70,26 @@ pip install -r requirements.txt
 ```
 
 ---
+## Quick Data Load
 
+```python
+import numpy as np
+
+# Stage 1 data
+X_train_s1 = np.load('Data/X_train_stage1_clean.npy')
+X_test_s1  = np.load('Data/X_test_stage1_clean.npy')
+y_train_s1 = np.load('Data/y_train_stage1.npy')
+y_test_s1  = np.load('Data/y_test_stage1.npy')
+
+# Stage 2 data
+X_train_s2 = np.load('Data/X_train_stage2_clean.npy')
+X_test_s2  = np.load('Data/X_test_stage2_clean.npy')
+y_train_s2 = np.load('Data/y_train_stage2.npy')
+y_test_s2  = np.load('Data/y_test_stage2.npy')
+
+print(f"Stage 1 - Train: {X_train_s1.shape}, Test: {X_test_s1.shape}")
+print(f"Stage 2 - Train: {X_train_s2.shape}, Test: {X_test_s2.shape}")
+```
 ## Usage
 
 Open `CASCADE_pipeline.ipynb` in Google Colab or Jupyter Notebook and update the data path in the first cell:
